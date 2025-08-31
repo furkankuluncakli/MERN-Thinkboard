@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 5001;
 dotenv.config();
 connectDB();
 
+app.use(express.json());
+
 app.use("/api/notes", router);
 
 app.listen(PORT, () => {
