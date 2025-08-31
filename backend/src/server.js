@@ -8,15 +8,13 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 dotenv.config();
-connectDB();
 
 app.use(express.json());
 
 app.use("/api/notes", router);
 
-app.listen(PORT, () => {
-  console.log("Server started on PORT: ", PORT);
+connectDB().then(() => {
+  app.listen(PORT, () => {
+    console.log("Server started on PORT: ", PORT);
+  });
 });
-
-// EMWIZ7nXMSvK65mc
-//
