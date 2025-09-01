@@ -1,5 +1,5 @@
 import { PenSquareIcon, Trash2Icon } from "lucide-react";
-import {formatDate} from "../lib/utils.ts"
+import { formatDate } from "../lib/utils.js";
 import { Link } from "react-router";
 
 function NoteCard({ note }) {
