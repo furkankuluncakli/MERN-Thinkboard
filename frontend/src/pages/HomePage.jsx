@@ -18,7 +18,7 @@ function HomePage() {
       try {
         const res = await api.get("/notes");
         setNotes(res.data);
-        console.log(res.data);
+
         setLoading(false);
         setIsRateLimited(false);
       } catch (error) {
