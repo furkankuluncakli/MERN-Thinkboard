@@ -45,7 +45,7 @@ function HomePage() {
         {notes.length > 0 && !isRateLimited && (
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg: grid-cols-3 gap-6 ">
             {notes.map((note,_id) => (
-              <NoteCard key={_id} note={note} />
+              <NoteCard key={_id} note={note} setNotes={setNotes}/>
             ))}
           </div>
         )}
